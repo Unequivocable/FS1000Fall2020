@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Soccer Player List</title>
+    <style>
+      #soccer {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        
+      }
+      #soccer th {
+        background-color: darkorange;
+      }
+      #soccer tr {
+        background-color: rgb(253, 200, 101);
+
+      }
+      #soccer tr:nth-child(even) {
+        background-color: rgba(102, 54, 54, 0.548);
+      }
+      #soccer tr:hover {
+        background-color: bisque;
+      }
+      #soccer img {
+        background:#000000;
+        padding:2px;
+        border:1px solid #999;
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1><b>Soccer Player List</b></h1>
+    <table id=soccer>
+      <tr>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Club</th>
+        <th>Position</th>
+        <th>Number</th>
+        <th colspan="2">Edit/Delete</th>
+      </tr>
+      <tr>
+        <td><img src="Images/messi.jpg" alt="Messi"/></td>
+        <td>Lionel Messi</td>
+        <td>Barcelona</td>
+        <td>Forward</td>
+        <td>10</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td><img src="Images/Ronaldo.jpg" alt="Ronaldo" /></td>
+        <td>Cristiano Ronaldo</td>
+        <td>Juventis</td>
+        <td>Forward</td>
+        <td>7</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td><img src="Images/Neymar.jpg" alt="Neymar" /></td>
+        <td>Neymar, Jr</td>
+        <td>Paris Saint-Germain</td>
+        <td>Forward</td>
+        <td>10</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td><img src="Images/Bale.jpg" alt="Bale" /></td>
+        <td>Gareth Bale</td>
+        <td>Real Madrid</td>
+        <td>Midfielder</td>
+        <td>11</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+      <tr>
+        <td><img src="Images/pogba.jpg" alt="Pogba" /></td>
+        <td>Paul Pogba</td>
+        <td>Manchester United</td>
+        <td>Midfielder</td>
+        <td>6</td>
+        <td><a href="#">Edit</a></td>
+        <td><a href="#">Delete</a></td>
+      </tr>
+    </table>
+  </body>
+</html>
