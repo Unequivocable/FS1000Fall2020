@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Calculate area of rectangle</title>
+        <script type="text/javascript">
+        let errors = new Array ()
+        errors[0] = "errWidth"
+        errors[1] = "errLength"
+        let answer = "answer"
+        function validate()
+        {
+            let inputs = new Array ()
+            inputs[0] = document.getElementById('width').value;
+            inputs[1] = document.getElementById('length').value;
+            for (i in inputs)
+            {
+                let error = errors[i];
+                if (inputs[i] == "")
+                {
+                    document.getElementById(error).innerHTML = "Please enter a number";
+                }
+                else
+                {
+                    document.getElementById(error).innerHTML = "";
+                }
+            }
+        }
+        function calculate()
+        {
+            let result = document.getElementById('width').value * document.getElementById('length').value
+            if (result != "")
+            {
+            document.getElementById(answer).innerHTML = "The area is  " + result;
+            }
+        }
+        </script>
+
+    </head>
+    <body>
+        <h1>
+            Enter the width and length of the rectangle:
+        </h1>
+            <label>
+                Enter width:
+                <input type="number" id="width">
+            </label>
+            <div id="errWidth"></div>
+            <label>
+                Enter length:
+                <input type="number" id="length">
+            </label>
+            <div id="errLength"></div>
+            <input type="button" value="Calculate" onclick="validate();calculate();"/>
+        <p></p>
+        <div id="answer"></div>
+    </body>
+</html>
