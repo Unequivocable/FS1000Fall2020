@@ -3,61 +3,68 @@
   <head>
     <title>Dustin Siggelkow</title>
      <link rel="stylesheet" href="styles.css">
+     <script type="text/javascript">
+          // function changeHeader2 ()
+          // {
+          //   let newColor = document.getElementsByClassName("headPalette2")
+          //   newColor[0].style.backgroundColor="black";
+          //   newColor[0].style.color="white";
+          //  }
+          //  function changeHeader ()
+          // {
+          //   let newColor = document.getElementsByClassName("headPalette1")
+          //   newColor[0].style.backgroundColor="white";
+          //   newColor[0].style.color="black";
+          //  }
+          function changeColor(newColor)
+            {
+            if (newColor == "headPalette1")
+            {
+            let newColors = document.getElementsByClassName("headPalette1")
+            newColors[0].style.backgroundColor="white";
+            newColors[0].style.color="black";
+            newColors[1].style.backgroundColor="green";
+            }
+            else
+            {
+            let newColors = document.getElementsByClassName("headPalette2")
+            newColors[0].style.backgroundColor="black";
+            newColors[0].style.color="white";
+            newColors[1].style.backgroundColor="blue";
+            newColors[2].style.color="black";
+            }
+          }
+
+    </script>
   </head>
   <body>
-    <header>
-        <h1>Dustin Siggelkow's Web Development Site</h1>
+    <header id=hColor class="headPalette1 headPalette2">
+        <div class=logo>
+          <h1>DJS</h1>
+        </div>
+        <div class=banner>
+          <h1>Dustin Siggelkow's Web Development Site</h1>
+        </div>
       </header>
-      <nav>
+      <nav class="headPalette1 headPalette2">
         <ul>
           <li class=active>Home</li> 
-          <li><a href="myresume.html">Resume</a></li>
-          <li><a href="myPortfolio.html">Portfolio</a></li>
-          <li><a href="myContact.html">Contact</a></li>
+          <li><a href="myresume.html" class="headPalette1 headPalette2">Resume</a></li>
+          <li><a href="myPortfolio.html" class="headPalette1 headPalette2">Portfolio</a></li>
+          <li><a href="myContact.html" class="headPalette1 headPalette2">Contact</a></li>
           </ul>
       </nav>
       <main>
         <section>
           <article>
-             This is the home page of my web development site which I am building as part of the Full Stack Web Development Certificate program.
+             This is the home page of my web development site which I am building as part of the Full Stack Web Development Certificate program.  It currently contains my resume, a contact form, and a demostration of what I am learning to build in the Portfolio section.
+             <!-- <a href = "javascript:void (0)" onclick="changeColor('headPalette1')">Change</a>
+             <a href = "javascript:void (0)" onclick="changeColor('headPalette2')">Change</a> -->
             </article>
           <article>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. 
+            This site is currently showing the color palette of the season based on today's date.  If you want to see the other seasons, select the appropriate logo in the upper left.  NOTE: This is based on Canadian seasons and may not be completely accurate depending where in the world you are accessing this from.
         </article>
-        <article>
-          Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum. lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum.
-          </article>
-          </section>
-          </main>
+       </section>
+      </main>
   </body>
 </html>
