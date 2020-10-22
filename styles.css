@@ -5,25 +5,13 @@ body {
     margin: 15px;
 }
 .banner {
-    padding: 25px;
+    padding: 31px 25px;
     margin: 15px 0px 15px 22%;
     background-color: #581c0c;
     text-align: center;
     color: #f9b384;
     border-radius: 35px;
 }
-/* .logo {
-    background-color: #361107;
-    color: #f1e3cb;
-    padding: 5px 0;
-    margin: 0;
-    width: 20%;
-    text-align: center;
-    font-size: x-large;
-    border-radius: 35px;
-    position: fixed;
-} */
-
 nav a{
     color:  #581c0c;
     text-decoration: none;
@@ -93,7 +81,7 @@ div.image {
     justify-content: space-evenly;
     background-color: #581c0c;
     padding: 0;
-    padding: 5px 0;
+    padding: 6px 0;
     width: 20%;
     border-radius: 35px;
     position: fixed;
@@ -156,7 +144,3 @@ div.image {
     color:  #f1e3cb;
     text-decoration: none;
 }
-/* .logoGrid a:hover {
-    color: #581c0c;
-
-} */

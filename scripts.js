@@ -1,15 +1,16 @@
+// this function changes the color palette based on the current time
 function seasons()
 {
   let today= new Date();
-  if (today.getMonth()>2 && 6>today.getMonth())
+  if (today.getMinutes()<16)
   {
     changeColor('1');
   }
-  else if (today.getMonth()>5 && 9>today.getMonth())
+  else if (today.getMinutes()>15 && 31>today.getMinutes())
   {
     changeColor('3');
   }
-  else if (today.getMonth()>8 && 12>today.getMonth())
+  else if (today.getMinutes()>30 && 46>today.getMinutes())
   {
     changeColor('2');
   }
@@ -18,7 +19,7 @@ function seasons()
     changeColor('0');
   }
 }
-
+// This function is what actually updates the color palette based on the input #--0 is winter, 1 is spring, 2 is autumn and 3 is spring
 function changeColor(newColor)
 {
   let color1 = "#f1e3cb";
