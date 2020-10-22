@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dustin Siggelkow</title>
+     <link rel="stylesheet" href="styles.css">
+     <script src="scripts.js"></script>
+  </head>
+  <body class="winter spring autumn summer" onload=seasons()>
+    <header>
+        <div class="logoGrid winter spring autumn summer">
+          <a href = "javascript:changeColor('0')"><div class=wlogo>Winter</div></a>
+          <a href = "javascript:changeColor('1')"><div class=slogo>Spring</div></a>
+          <a href = "javascript:changeColor('2')"><div class=alogo>Autumn</div></a>
+          <a href = "javascript:changeColor('3')"><div class=sumlogo>Summer</div></a>
+        </div>
+        <div class="banner winter spring autumn summer" >
+          <h1>Dustin Siggelkow's Web Development Site</h1>
+        </div>
+      </header>
+      <nav class="winter spring autumn summer">
+        <ul>
+          <li class="active winter spring autumn summer">Home</li> 
+          <li><a href="myresume.html">Resume</a></li>
+          <li><a href="myPortfolio.html">Portfolio</a></li>
+          <li><a href="myContact.html">Contact</a></li>
+          </ul>
+      </nav>
+      <main>
+        <section class="winter spring autumn summer">
+          <article>
+             This is the home page of my web development site which I am building as part of the Full Stack Web Development Certificate program at York University.  It currently contains my resume, a contact form, and a demostration of what I am learning to build in the Portfolio section.
+            </article>
+          <article>
+            My original idea was for this site to change color palette based on the season as calcuated by today's date.  However, as that would take months to see the different changes, I adapted the logic to change the season every 15 minutes.  So over the course of an hour you will see all four seasons.  If you want to manually switch to the other seasons, select the appropriate logo in the upper left.  
+        </article>
+       </section>
+      </main>
+  </body>
+</html>
