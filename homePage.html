@@ -3,63 +3,32 @@
   <head>
     <title>Dustin Siggelkow</title>
      <link rel="stylesheet" href="styles.css">
-     <script type="text/javascript">
-          // function changeHeader2 ()
-          // {
-          //   let newColor = document.getElementsByClassName("headPalette2")
-          //   newColor[0].style.backgroundColor="black";
-          //   newColor[0].style.color="white";
-          //  }
-          //  function changeHeader ()
-          // {
-          //   let newColor = document.getElementsByClassName("headPalette1")
-          //   newColor[0].style.backgroundColor="white";
-          //   newColor[0].style.color="black";
-          //  }
-          function changeColor(newColor)
-            {
-            if (newColor == "headPalette1")
-            {
-            let newColors = document.getElementsByClassName("headPalette1")
-            newColors[0].style.backgroundColor="white";
-            newColors[0].style.color="black";
-            newColors[1].style.backgroundColor="green";
-            }
-            else
-            {
-            let newColors = document.getElementsByClassName("headPalette2")
-            newColors[0].style.backgroundColor="black";
-            newColors[0].style.color="white";
-            newColors[1].style.backgroundColor="blue";
-            newColors[2].style.color="black";
-            }
-          }
-
-    </script>
+     <script src="scripts.js"></script>
   </head>
-  <body>
-    <header id=hColor class="headPalette1 headPalette2">
-        <div class=logo>
-          <h1>DJS</h1>
+  <body class="winter spring autumn summer" onload=seasons()>
+    <header>
+        <div class="logoGrid winter spring autumn summer">
+          <a href = "javascript:changeColor('0')"><div class=wlogo>Winter</div></a>
+          <a href = "javascript:changeColor('1')"><div class=slogo>Spring</div></a>
+          <a href = "javascript:changeColor('2')"><div class=alogo>Autumn</div></a>
+          <a href = "javascript:changeColor('3')"><div class=sumlogo>Summer</div></a>
         </div>
-        <div class=banner>
+        <div class="banner winter spring autumn summer" >
           <h1>Dustin Siggelkow's Web Development Site</h1>
         </div>
       </header>
-      <nav class="headPalette1 headPalette2">
+      <nav class="winter spring autumn summer">
         <ul>
-          <li class=active>Home</li> 
-          <li><a href="myresume.html" class="headPalette1 headPalette2">Resume</a></li>
-          <li><a href="myPortfolio.html" class="headPalette1 headPalette2">Portfolio</a></li>
-          <li><a href="myContact.html" class="headPalette1 headPalette2">Contact</a></li>
+          <li class="active winter spring autumn summer">Home</li> 
+          <li><a href="myresume.html">Resume</a></li>
+          <li><a href="myPortfolio.html">Portfolio</a></li>
+          <li><a href="myContact.html">Contact</a></li>
           </ul>
       </nav>
       <main>
-        <section>
+        <section class="winter spring autumn summer">
           <article>
              This is the home page of my web development site which I am building as part of the Full Stack Web Development Certificate program.  It currently contains my resume, a contact form, and a demostration of what I am learning to build in the Portfolio section.
-             <!-- <a href = "javascript:void (0)" onclick="changeColor('headPalette1')">Change</a>
-             <a href = "javascript:void (0)" onclick="changeColor('headPalette2')">Change</a> -->
             </article>
           <article>
             This site is currently showing the color palette of the season based on today's date.  If you want to see the other seasons, select the appropriate logo in the upper left.  NOTE: This is based on Canadian seasons and may not be completely accurate depending where in the world you are accessing this from.

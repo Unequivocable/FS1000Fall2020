@@ -2,27 +2,31 @@
 <html lang="en">
   <head>
     <title>Contact Dustin Siggelkow</title>
-     <link rel="stylesheet" href="styles.css">   
+     <link rel="stylesheet" href="styles.css">  
+     <script src="scripts.js"></script> 
   </head>
-  <body>
+  <body class="winter spring autumn summer" onload=seasons()>
     <header>
-      <div class=logo>
-        <h1>DJS</h1>
+      <div class="logoGrid winter spring autumn summer">
+        <a href = "javascript:changeColor('0')"><div class=wlogo>Winter</div></a>
+        <a href = "javascript:changeColor('1')"><div class=slogo>Spring</div></a>
+        <a href = "javascript:changeColor('2')"><div class=alogo>Autumn</div></a>
+        <a href = "javascript:changeColor('3')"><div class=sumlogo>Summer</div></a>
       </div>
-      <div class=banner>
+      <div class="banner winter spring autumn summer">
         <h1>Dustin Siggelkow's Web Development Site</h1>
       </div>
     </header>
-    <nav>
+    <nav class="winter spring autumn summer">
       <ul>
         <li><a href="homePage.html">Home</a></li> 
         <li><a href="myresume.html">Resume</a></li>
         <li><a href="myPortfolio.html">Portfolio</a></li>
-        <li class=active>Contact</li>
+        <li class="active winter spring autumn summer">Contact</li>
         </ul>
     </nav>
     <main>
-      <section>
+      <section class="winter spring autumn summer">
         <article>
             If you wish to contact me directly, please fill in the following
             form to send me a message. I will reply to you via the provided
