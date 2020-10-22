@@ -30,23 +30,49 @@
         <article>
             If you wish to contact me directly, please fill in the following
             form to send me a message. I will reply to you via the provided
-            email address. Thank you.
+            email address.
           </p>
-          <form>
-            <label>First Name: <input type="text" required></label>
-              <br><br>
-            <label>Last Name: <input type="text" required></label>
-              <br><br>
-            <label>Phone Number<input type="tel" placeholder="xxx-xxx-xxxx"></label>
-              <br><br>
-            <label>Email:<input type="email" required placeholder="Enter a valid email address"></label>
-              <br><br>
+          <form id=form class=portfolio>
+
+            <div class=content>
+              <label>First Name: 
+                <input type="text" id=first>
+              </label>
+            </div>
+            <div id=errFN class=content>
+            </div>
+            <div class=content>
+              <label>Last Name: 
+                <input type="text" id=last>
+              </label>
+            </div>
+            <div id=errLN class=content>
+            </div>
+            <div class=content>
+              <label>Phone Number:
+                <input type="tel" placeholder="xxx-xxx-xxxx" id=phone onkeyup="validatePhone()">
+              </label>
+            </div>
+            <div id=errPhone class=content>              
+            </div>
+            <div class=content>
+              <label>Email:
+                <input type="email" id=email placeholder="Enter a valid email address" onkeyup="validateEmail()">
+              </label>
+            </div>
+            <div id=errEmail class=content>
+            </div>
+            <div class=content>
             <label for="comments">Comments:</label>
-              <br>
-            <textarea rows="3" cols="40" name="comments" id="comments" required placeholder="Provide message content here"></textarea>
-              <br><br>
-            <input type="submit" value="Submit"> &nbsp;
-            <input type="reset" value="Reset">
+              <textarea rows="3" cols="40" name="comments" id="comments" placeholder="Provide message content here" id=comments></textarea>
+            </div>
+            <div id=errCom class=content>              
+            </div>
+            <div class=content>
+              <input type="button" onclick="validateOther(), validatePhone(), validateEmail(), validate()" value="Submit"> &nbsp;
+              <input type="reset" value="Reset">
+            </div>
+            <div id=errForm class=content></div>
           </form>
         </td>
       </tr>

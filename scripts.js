@@ -49,9 +49,9 @@ function changeColor(newColor)
   }
   else 
   {
-  color1 = "#ffff9d"; 
-  color2 = "#79bd8f";
-  color3 = "#ff6138";
+  color1 = "#79bd8f";
+  color2 = "#ff6138";
+  color3 = "#ffff9d"; 
   color4 = "#beeb9f";
   }
   let body = new Array (color1,"#000000");
@@ -69,3 +69,71 @@ for (i=0;i<newColors.length;i++)
   newColors[i].style.color=options[i][1];
 }
 }
+// form validation scripts  -- thanks to the FS1000 jsforms sample you provided which gave me the direction for this validation type
+function validatePhone()
+{
+  let phoneNum = document.getElementById('phone').value
+  if(/^(\()?([2-9][02-8][02-9])([)-])?([2-9][0-9][0-9])([-])?([0-9][0-9][0-9][0-9])*$/.test(phoneNum)!=true)
+  {
+    document.getElementById("errPhone").innerHTML = "Please enter a valid 10-digit phone number.";
+  }
+  else
+  {
+    document.getElementById("errPhone").innerHTML = "Thank you.";
+  }
+}
+function validateEmail()
+{ 
+  let emailAdd = document.getElementById('email').value
+  let atPosition=emailAdd.indexOf("@");
+  let dotPosition=emailAdd.lastIndexOf(".");
+  if (atPosition<1 || dotPosition<atPosition+2 || dotPosition+2>=emailAdd.length)
+  {
+    document.getElementById("errEmail").innerHTML = "Please enter a valid email address.";
+  }
+  else
+  {
+    document.getElementById("errEmail").innerHTML= "Thank you.";
+  }
+}
+let error = ["errFN","errLN","errPhone","errEmail","errCom"]
+function validateOther()
+{
+   let firstName = document.getElementById('first').value;
+   let lastName = document.getElementById('last').value;
+   let email = document.getElementById('email').value;
+   let phone = document.getElementById('phone').value;
+   let comments = document.getElementById('comments').value;
+   let text = [firstName, lastName, phone, email, comments]
+   let error = ["errFN","errLN","errPhone","errEmail","errCom"]
+  for (i=0;i<text.length;i++)  
+  if(text[i] == "")
+  {
+    document.getElementById(error[i]).innerHTML = "This field is required";
+  }
+  else
+  {
+    document.getElementById(error[i]).innerHTML = "Thank you.";
+  }
+}
+function validate()
+{
+  count = 0
+  for(i=0;i<5;i++)
+  {
+    if(document.getElementById(error[i]).innerHTML == "Thank you.")
+      {
+      count = count + 1;
+      }
+  }
+  if(count == 5)
+  {
+    alert("Thank you for your submission");
+    document.getElementById("form").submit();
+  }
+  else  
+  {
+    document.getElementById("errForm").innerHTML = "Please fill in all fields";
+  }
+}
+  
